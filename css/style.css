@@ -1,0 +1,949 @@
+@font-face {
+    font-family: 'locus_sangsang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MapoPeacefull';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JSArirangHON-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    position: absolute;
+}
+
+.logo {
+    width: 120px;
+    position: absolute;
+    top: 28px;
+    left: 35px;
+}
+
+nav {
+    margin-left: 50%;
+    transform: translateX(-52%);
+}
+
+nav > ul {
+    position: relative;
+    top: 30px;
+}
+
+nav > ul > li {
+    width: 160px;
+    float: left;
+    margin-left: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav > ul > li:nth-child(1) {
+    margin-left: 0;
+}
+
+nav > ul > li > a {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.subMenu {
+    background-color: whitesmoke;
+    padding: 7px;
+    border-radius: 7px;
+    display: none;
+    margin-top: 10px;
+}
+
+.subMenu > li {
+    margin-top: 4px;
+    padding: 4px;
+    display: block;
+}
+
+.subMenu > li > a {
+    padding: 5px;
+    font-size: 15px;
+    display: block;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+
+.subMenu > li > a:hover {
+    background-color: darkseagreen;
+    border-radius: 7px;
+}
+
+.headerIcon {
+    width: 300px;
+    position: absolute;
+    top: 30px;
+    right: -100px;
+}
+
+.headerIcon div {
+    float: left;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.headerIcon div:nth-child(1) {
+    margin-left: 50px;
+}
+
+.headerIcon i {
+    margin-left: 5px;
+    color: whitesmoke;
+    transition: 0.3s;
+}
+
+.headerIcon p {
+    margin-top: 3px;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
+}
+
+.cart p {
+    margin-left: 5px;
+}
+
+.search p {
+    margin-left: -3px;
+}
+
+.headerIcon div:hover i {
+    color: dimgrey;
+}
+
+.headerIcon div:hover p {
+    color: dimgrey;
+}
+
+.sticky {
+    width: 100%;
+    height: 100px;
+    background-color: #758247;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+}
+
+.sticky img {
+    width: 120px;
+    position: absolute;
+    top: 28px;
+    left: 35px;
+}
+
+.sticky a {
+    color: white;
+}
+
+/*ㅡㅡㅡㅡㅡsectionㅡㅡㅡㅡㅡ*/
+section {
+    width: 100%;
+}
+
+section div {
+    width: 100%;
+    height: 969px;
+}
+
+#section_01 {
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+#section_01 img {
+    width: 100%;
+}
+
+.section_01 {
+    position: absolute;
+    top: 87%;
+    left: 30%;
+    z-index: 5;
+}
+
+.section_01 div {
+    float: left;
+    color: whitesmoke;
+    border-right: 1.5px solid whitesmoke;
+    border-radius: 2px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    padding: 0px 25px;
+    line-height: 180%;
+    font-size: 25px;
+    font-family: 'MapoPeacefull';
+}
+
+.section_01 div:last-child {
+    border-right: none;
+}
+
+#section_01 .section_01_mainText {
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 38%;
+}
+
+#section_01 .section_01_mainText p {
+    font-size: 70px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'JSArirangHON-Regular';
+}
+
+/*ㅡㅡㅡㅡㅡsection_02ㅡㅡㅡㅡㅡ*/
+#section_02 {
+    background-color: white;
+    position: relative;
+}
+
+#section_02 .About {
+    font-size: 20px;
+    color: #555;
+    position: absolute;
+    font-family: 'Noto Sans TC', sans-serif;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#section_02 .osulloc {
+    font-size: 50px;
+    position: absolute;
+    font-family: 'Noto Sans TC', sans-serif;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+#section_02 > img {
+    width: 50px;
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#section_02 .about > div {
+    width: 350px;
+    height: 450px;
+    box-shadow: 3px 3px 10px #666;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    overflow: hidden;
+}
+
+#section_02 .about > div:hover {
+    box-shadow: 5px 10px 20px #333;
+}
+
+#section_02 div {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section_02 .about_01 {
+    background-image: url(../img/about_06.jpg);
+    top: 380px;
+    left: 200px;
+    animation: aboutAni_01 3s infinite;
+}
+
+#section_02 .about_02 {
+    background-image: url(../img/about_05.jpg);
+    top: 450px;
+    left: 585px;
+    animation: aboutAni_02 3s infinite;
+}
+
+#section_02 .about_03 {
+    background-image: url(../img/about_02.jpg);
+    top: 380px;
+    left: 967px;
+    animation: aboutAni_01 3s infinite;
+}
+
+#section_02 .about_04 {
+    background-image: url(../img/about_01.jpg);
+    top: 450px;
+    left: 1350px;
+    animation: aboutAni_02 3s infinite;
+}
+
+@keyframes aboutAni_01 {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes aboutAni_02 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes aboutAni_media {
+
+    to {
+        transform: translateY(0px);
+    }
+
+    form {
+        transform: translateY(0px);
+    }
+}
+
+.about_01 .a,
+.about_02 .a,
+.about_03 .a,
+.about_04 .a {
+    width: 85%;
+    height: 400px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 25px;
+    left: 7.5%;
+    transition: 0.5s;
+    transform: rotateY(90deg);
+}
+
+.about_01 .a > p,
+.about_02 .a > p,
+.about_03 .a > p,
+.about_04 .a > p {
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'locus_sangsang';
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about_01:hover .a {
+    transform: rotateY(360deg);
+}
+
+.about_02:hover .a {
+    transform: rotateY(360deg);
+}
+
+.about_03:hover .a {
+    transform: rotateY(360deg);
+}
+
+.about_04:hover .a {
+    transform: rotateY(360deg);
+}
+
+.about_01 > .a:hover .more {
+    top: 310px;
+}
+
+.about_02 > .a:hover .more {
+    top: 310px;
+}
+
+.about_03 > .a:hover .more {
+    top: 310px;
+}
+
+.about_04 > .a:hover .more {
+    top: 310px;
+}
+
+
+.bi {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+}
+
+.about .a .more {
+    position: absolute;
+    top: 430px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    transition: 0.5s;
+    color: white;
+    width: 100%;
+    padding: 40px 0px;
+}
+
+.about .a .more:hover {
+    background-color: darkolivegreen;
+}
+
+/*ㅡㅡㅡㅡㅡsection_03ㅡㅡㅡㅡㅡ*/
+#section_03 {
+    position: relative;
+}
+
+#section_03 .bi {
+    font-size: 20px;
+    color: #555;
+    position: absolute;
+    font-family: 'Noto Sans TC', sans-serif;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#section_03 .osulloc {
+    font-size: 50px;
+    position: absolute;
+    font-family: 'Noto Sans TC', sans-serif;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+#section_03 .logo_02 {
+    width: 250px;
+    position: absolute;
+    left: 250px;
+    top: 300px;
+}
+
+#section_03 .section_03P {
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-45%);
+    font-family: 'MapoPeacefull';
+    font-size: 20px;
+    text-align: center;
+    line-height: 200%;
+}
+
+#section_03 .section_03P > span {
+    position: relative;
+    top: -55px;
+    font-size: 35px;
+    padding-bottom: 50px;
+    font-family: 'JSArirangHON-Regular';
+}
+
+.lastBox {
+    width: 80%;
+    height: 150px;
+    background-color: indianred;
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+}
+
+.lastBox > div {
+    width: 16.666%;
+    height: 150px;
+    background-color: lightgray;
+    float: left;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.lastBox > div:hover {
+    background-color: olivedrab;
+}
+
+.lastBox > .aboutBi {
+    background-color: olivedrab;
+}
+
+.lastBox > .aboutBi p {
+    color: #425718;
+}
+
+.lastBox > div > p {
+    font-size: 25px;
+    text-align: center;
+    line-height: 260px;
+    font-family: 'Recipekorea';
+    color: #8b8b8b;
+}
+
+.lastBox > div:hover p {
+    color: #425718;
+}
+
+.since > img {
+    position: absolute;
+    top: 13px;
+    left: 300px;
+}
+
+.aboutBi > img {
+    width: 90px;
+    position: absolute;
+    top: 15px;
+    left: 590px;
+}
+
+.teaTime > img {
+    width: 90px;
+    position: absolute;
+    top: 15px;
+    left: 840px;
+}
+
+.map > img {
+    width: 150px;
+    position: absolute;
+    top: -10px;
+    left: 1067px;
+}
+
+.tea > img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    right: 80px;
+}
+
+.story > img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 75px;
+}
+
+/*ㅡㅡㅡㅡㅡsection04ㅡㅡㅡㅡㅡ*/
+#section_04 {
+    position: relative;
+    overflow: hidden;
+}
+
+#section_04 .made {
+    font-size: 20px;
+    color: #555;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#section_04 .osulloc {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+#section_04 .accordion {
+    width: 80%;
+    height: 650px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#section_04 .accordion > div {
+    width: 150px;
+    height: 100%;
+    float: left;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+#section_04 .accordion > div {
+    text-align: left;
+}
+
+#section_04 .accordion > div:nth-child(1) {
+    background-image: url(../img/accordion_01.jpg);
+    width: 750px;
+}
+
+#section_04 .accordion > div:nth-child(2) {
+    background-image: url(../img/accordion_03.jpg);
+}
+
+#section_04 .accordion > div:nth-child(3) {
+    background-image: url(../img/accordion_05.jpg);
+}
+
+#section_04 .accordion > div:nth-child(4) {
+    background-image: url(../img/accordion_04.jpg);
+}
+
+#section_04 .accordion > div:nth-child(5) {
+    background-image: url(../img/accordion_02.jpg);
+}
+
+#section_04 .accordion > div:nth-child(6) {
+    background-image: url(../img/accordion_06.jpg);
+}
+
+#section_04 .accordion img {
+    width: 100px;
+    transition: 1s;
+    transform: translateY(300px) translateX(20px);
+}
+
+#section_04 .accordion div p {
+    width: 600px;
+    height: 300px;
+    color: whitesmoke;
+    font-size: 15px;
+    position: absolute;
+    left: 110px;
+    top: 47%;
+    line-height: 210%;
+    font-family: 'MapoPeacefull';
+    text-align: center;
+}
+
+
+/*ㅡㅡㅡㅡㅡsection05ㅡㅡㅡㅡㅡ*/
+#section_05 {
+    position: relative;
+}
+
+#section_05 .organic {
+    font-size: 20px;
+    color: #555;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#section_05 .osulloc {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+#section_05 .jejuOrganic {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'MapoPeacefull';
+    font-size: 30px;
+    z-index: 1;
+    color: whitesmoke;
+}
+
+#section_05 .organicDiv {
+    width: 90%;
+    height: 600px;
+    background-image: url(../img/oganicbg.jpg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-30%);
+}
+
+#section_05 .organicDiv img {
+    margin-right: 170px;
+    margin-top: 240px;
+    width: 200px;
+    float: left;
+}
+
+#section_05 .organicDiv img:nth-child(1) {
+    margin-left: 160px;
+}
+
+#section_05 .organicDiv span {
+    color: white;
+    font-family: 'MapoPeacefull';
+    position: absolute;
+    text-align: center;
+    line-height: 180%;
+}
+
+#section_05 .organicDiv .organicMark_01 {
+    left: 175px;
+    top: 460px;
+}
+
+#section_05 .organicDiv .organicMark_02 {
+    left: 595px;
+    top: 460px;
+}
+
+#section_05 .organicDiv .organicMark_03 {
+    left: 905px;
+    top: 460px;
+}
+
+#section_05 .organicDiv .organicMark_04 {
+    left: 1260px;
+    top: 460px;
+}
+
+/*ㅡㅡㅡㅡㅡfooterㅡㅡㅡㅡㅡ*/
+#footer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #758247;
+}
+
+#footer > img {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#footer ul {
+    position: absolute;
+    left: 295px;
+    top: 85px;
+}
+
+#footer ul li {
+    float: left;
+}
+
+#footer ul li a {
+    margin-left: 20px;
+    font-size: 13px;
+    color: whitesmoke;
+    font-family: 'GmarketSansMedium';
+}
+
+#footer ul li a:after {
+    content: '|';
+    margin-left: 20px;
+}
+
+#footer ul li:last-of-type a:after {
+    content: '';
+}
+
+#footer ul li:hover a {
+    color: #333;
+}
+
+#footer .notice {
+    font-family: 'GmarketSansMedium';
+    color: whitesmoke;
+    line-height: 200%;
+    font-size: 15px;
+    position: absolute;
+    left: 310px;
+    top: 150px;
+}
+
+#footer .kakao {
+    position: relative;
+    left: 1150px;
+    top: 75px;
+    width: 300px;
+    font-family: 'GmarketSansMedium';
+    color: whitesmoke;
+    text-align: center;
+}
+
+#footer .kakao p {
+    font-size: 15px;
+    line-height: 280%;
+}
+
+#footer .kakao span {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#footer .kakao span:hover {
+    text-decoration: underline;
+}
+
+#footer .kakao .id {
+    font-size: 15px;
+}
+
+#footer .kakao .id:hover {
+    text-decoration: none;
+    cursor: inherit;
+}
+
+#footer .phone {
+    position: absolute;
+    top: 75px;
+    left: 1500px;
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    text-align: center;
+    width: 320px;
+}
+
+#footer .phone p {
+    font-family: 'GmarketSansMedium';
+    color: whitesmoke;
+    line-height: 250%;
+}
+
+#footer .phone span {
+    font-size: 35px;
+    line-height: 120%;
+}
+
+#footer .sns {
+    position: absolute;
+    left: 1520px;
+    top: 190px;
+}
+
+#footer .sns i {
+    margin-left: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+#footer .sns i:nth-child(1):hover {
+    color: #243d90;
+}
+
+#footer .sns i:nth-child(2):hover {
+    color: #3882b9;
+}
+
+#footer .sns i:nth-child(3):hover {
+    color: #3db938;
+}
+
+#footer .sns i:nth-child(4):hover {
+    color: #af38b9;
+}
+
+
+
+/*ㅡㅡㅡㅡㅡmedia_600ㅡㅡㅡㅡㅡ*/
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    top: 20px;
+    display: none;
+    z-index: 5;
+}
+
+.mediaI {
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    color: white;
+    display: none;
+}
+
+.media_3p {
+    display: none;
+}
+
+.media_accodion {
+    display: none;
+}
+
+.media_accodion p {
+    display: none;
+}
+
+.mediaAbout {
+    display: none;
+}
+
+.media_back {
+    display: none;
+}
+
+#section_02 > span {
+    display: none;
+}
+
+#section_04 .section04_span01 {
+    display: none;
+}
+
+#media_footer {
+    display: none;
+}

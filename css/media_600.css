@@ -1,0 +1,556 @@
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+    header {
+        width: 100%;
+        height: 70px;
+        background-color: rgba(0, 0, 0, 0.59);
+        z-index: 5;
+    }
+
+    header .logo {
+        width: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .sticky {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 20;
+    }
+
+    .mediaI {
+        display: block;
+    }
+
+    .mediaNav {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 105, 180, 0.62);
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: -70px;
+        display: none;
+    }
+
+    .mediaNav ul {
+        text-align: center;
+        padding-top: 250px;
+    }
+
+    .mediaNav ul li {
+        margin: 30px 0px;
+    }
+
+    .mediaNav ul li a {
+        color: white;
+        font-size: 20px;
+    }
+
+    #section_01 .section_01_mainText {
+        display: none;
+    }
+
+
+
+
+    /*ㅡㅡㅡㅡㅡsection_01ㅡㅡㅡㅡㅡ*/
+    section {
+        width: 100%;
+    }
+
+
+    #section_01 {
+        background-image: url(../img_600/main_01.jpg);
+        height: 750px;
+    }
+
+    #section_01 > img {
+        opacity: 0;
+    }
+
+    .section_01 {
+        display: none;
+    }
+
+    .mediaMainText {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 100px;
+    }
+
+    .mediaMainText p {
+        font-size: 35px;
+        color: whitesmoke;
+        text-align: center;
+        font-family: 'JSArirangHON-Regular';
+        line-height: 170%;
+    }
+
+    /*ㅡㅡㅡㅡㅡsection_02ㅡㅡㅡㅡㅡ*/
+
+    #section_02 {
+        width: 100%;
+        height: 1400px;
+        position: relative;
+    }
+
+    #section_02 .About {
+        font-size: 15px;
+        top: 34px;
+        left: 15%;
+    }
+
+    #section_02 .osulloc {
+        font-size: 30px;
+        top: 53px;
+        left: 28%;
+    }
+
+    #section_02 > img {
+        display: none;
+    }
+
+    #section_02 .about {
+        display: none;
+    }
+
+    #section_02 > span {
+        display: block;
+        position: absolute;
+        top: 120px;
+        left: 9%;
+        font-family: 'MapoPeacefull';
+        font-size: 15px;
+        line-height: 180%;
+    }
+
+    .mediaAbout {
+        width: 90%;
+        display: block;
+        position: absolute;
+        top: 230px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mediaAbout div {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 50px;
+        background-position: bottom;
+    }
+
+    .mediaAbout div:nth-child(1) {
+        background-image: url(../img_600/about_06.jpg);
+    }
+
+    .mediaAbout div:nth-child(2) {
+        background-image: url(../img_600/about_05.jpg);
+    }
+
+    .mediaAbout div:nth-child(3) {
+        background-image: url(../img_600/about_02.jpg);
+    }
+
+    .mediaAbout div:nth-child(4) {
+        background-image: url(../img_600/about_01.jpg);
+    }
+
+    .mediaAbout div p {
+        font-family: 'MapoPeacefull';
+        font-size: 20px;
+        display: none;
+        position: relative;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.36)
+    }
+
+    .mediaAbout div .more {
+        font-family: 'MapoPeacefull';
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 210px;
+        right: 15px;
+    }
+
+    .mediaAbout div:nth-child(2) .more {
+        top: 510px;
+    }
+
+    .mediaAbout div:nth-child(3) .more {
+        top: 810px;
+    }
+
+    .mediaAbout div:nth-child(4) .more {
+        top: 1110px;
+    }
+
+
+    /*ㅡㅡㅡㅡㅡsection_03ㅡㅡㅡㅡㅡ*/
+    #section_03 {
+        position: relative;
+        height: 600px;
+    }
+
+    #section_03 .bi {
+        font-size: 20px;
+        top: 50px;
+        left: 15%;
+    }
+
+    #section_03 .osulloc {
+        font-size: 30px;
+        top: 80px;
+        left: 30%;
+    }
+
+    #section_03 .logo_02 {
+        left: 11%;
+        top: 160px;
+        width: 100px;
+    }
+
+    #section_03 .section_03P {
+        display: none;
+    }
+
+    #section_03 .media_3p {
+        position: absolute;
+        top: 320px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+        text-align: center;
+        font-size: 18px;
+        display: block;
+        font-family: 'MapoPeacefull';
+        line-height: 200%;
+    }
+
+    #section_03 .media_3p > span {
+        font-family: 'JSArirangHON-Regular';
+        font-size: 20px;
+        padding-bottom: 50px;
+        position: absolute;
+        width: 350px;
+        top: -120px;
+        left: 21%;
+    }
+
+    .lastBox {
+        display: none;
+    }
+
+    /*ㅡㅡㅡㅡㅡsection_04ㅡㅡㅡㅡㅡ*/
+    #section_04 {
+        position: relative;
+        height: 1900px;
+    }
+
+    #section_04 .made {
+        font-size: 20px;
+        color: #555;
+        position: absolute;
+        top: 50px;
+        left: 15%;
+        transform: translateX(-50%);
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    #section_04 .osulloc {
+        font-size: 30px;
+        top: 76px;
+        left: 28%;
+    }
+
+    #section_04 > span {
+        display: block;
+        position: absolute;
+        top: 140px;
+        left: 9%;
+        font-family: 'MapoPeacefull';
+        font-size: 15px;
+        line-height: 180%;
+    }
+
+    #section_04 .section04_span01 {
+        display: block;
+    }
+
+    #section_04 .accordion {
+        display: none;
+    }
+
+    .media_accodion {
+        display: block;
+        position: relative;
+        top: 230px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .media_accodion div {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .media_accodion div img {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .media_accodion div .icon {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        left: 50%;
+        transform: translateY(-30%) translateX(-120%);
+        top: 50%;
+        width: 120px;
+        height: 110px;
+        background-repeat: no-repeat;
+        background-size: 100px;
+    }
+
+    .media_accodion div:nth-of-type(1) .icon {
+        background-image: url(../img/accordionIcon_01.png);
+    }
+
+    .media_accodion div:nth-of-type(2) .icon {
+        background-image: url(../img/accordionIcon_02.png);
+    }
+
+    .media_accodion div:nth-of-type(3) .icon {
+        background-image: url(../img/accordionIcon_03.png);
+        transform: translateY(-45%) translateX(-120%);
+    }
+
+    .media_accodion div:nth-of-type(4) .icon {
+        background-image: url(../img/accordionIcon_04.png);
+        transform: translateY(-45%) translateX(-120%);
+    }
+
+    .media_accodion div:nth-of-type(5) .icon {
+        background-image: url(../img/accordionIcon_06.png);
+        transform: translateY(-45%) translateX(-120%);
+    }
+
+    .media_accodion div:nth-of-type(6) .icon {
+        background-image: url(../img/accordionIcon_05.png);
+        transform: translateY(-45%) translateX(-120%);
+    }
+
+    .media_accodion > div .one {
+        font-size: 16px;
+        font-family: 'MapoPeacefull';
+        color: white;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-250%) translateX(-15%);
+    }
+
+    .media_accodion > div .two {
+        font-size: 14px;
+        font-family: 'MapoPeacefull';
+        color: white;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-15%) translateY(-10%);
+        text-align: justify;
+        width: 185
+    }
+
+    /*ㅡㅡㅡㅡㅡfooterㅡㅡㅡㅡㅡ*/
+    section:nth-of-type(2) {
+        height: 300px;
+        position: relative;
+    }
+
+    #media_footer {
+        display: block;
+        background-color: #758247;
+        font-family: 'GmarketSansMedium';
+    }
+
+    #media_footer ul li {
+        float: left;
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+
+    #media_footer ul li a {
+        font-size: 14px;
+        color: white;
+    }
+
+    #media_footer ul li a:after {
+        content: '|';
+        margin-left: 20px;
+    }
+
+    #media_footer ul li:last-of-type a:after {
+        content: '';
+    }
+
+    #media_footer ul li:nth-of-type(1) {
+        margin-top: 33px;
+    }
+
+
+    #media_footer .notice {
+        display: block;
+        clear: left;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 110px;
+        font-size: 13px;
+        line-height: 180%;
+        color: white;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*.media_accodion>div{width: 250px; height: 250px; border-radius: 250px;  margin-bottom: 150px; overflow: hidden;}
+    .media_accodion>div>img{width: 400px; height: 300px; background-size: cover; background-position: center;}
+    .media_accodion>div:nth-child(1){}
+    .media_accodion>div:nth-child(2){}
+    .media_accodion>div:nth-child(3){}
+    .media_accodion>div:nth-child(4){}
+    .media_accodion>div:nth-child(5){}
+    .media_accodion>div:nth-child(6){}
+    .media_accodion div p{ font-size: 20px; width: 250px; position: absolute; text-align: center;
+        left: 50%; transform: translateX(-50%); font-family: 'MapoPeacefull'; line-height: 180%;}
+    .media_accodion div:nth-child(1) p{position: absolute; top: 280px;}
+    .media_accodion div:nth-child(2) p{top: 680px;}
+    .media_accodion div:nth-child(3) p{top: 1080px;}
+    .media_accodion div:nth-child(4) p{top: 1480px;}
+    .media_accodion div:nth-child(5) p{top: 1880px;}
+    .media_accodion div:nth-child(6) p{top: 2280px;}
+    
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #section_05,
+    #footer {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
