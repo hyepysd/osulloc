@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오설록</title>
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!--font-family: 'Roboto', sans-serif; 메뉴글씨-->
+
+    <style>
+        *{margin: 0; padding: 0px;}
+        a{text-decoration: none; color: #333;}
+        li{list-style-type: none;}
+        
+        @font-face {
+            font-family: 'SangSangRock';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SangSangRockOTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'JSArirangHON-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'HangeulNuri-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'WandohopeR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        
+        header {
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+
+        footer {
+            height: 100px;
+            border-bottom: 1px solid black;
+        }
+
+        /*.header, */.footer {
+            width: 1200px;
+            margin: auto;
+            height: 100px;
+            background-color: pink;
+        }
+
+        header.active {
+            background-color: #758247;
+        }
+        
+        section{
+            width: 100%;
+        }
+        
+        section:nth-of-type(1) {
+            background-color: black;
+        }
+
+        section:nth-of-type(2) {
+            background-color: white;
+        }
+
+        section:nth-of-type(3) {
+            background-color: white;
+        }
+
+        section:nth-of-type(4) {
+            background-color: white;
+        }
+        
+        /*header*/
+        .mainLogo{
+            margin-left: 13%;
+            margin-top: 25px;
+            float: left;
+        }
+        
+        nav{
+            width: 80%;
+            height: 100px;
+            margin: auto;
+        }
+        
+        nav ul{
+            width: 530px;
+            height: 100px;
+            margin: auto;
+        }
+        
+        nav ul li{
+            float: left;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        
+        nav ul li:last-of-type{
+            padding-right: 0px;
+        }
+        
+        nav ul li a{
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        
+        /*section01*/
+        #fullpage .main{
+            width: 100%;
+            position: relative;
+        }
+        
+        .main .mainImgFade img{
+            width: 1920px;
+            top: -100px;
+            position: relative;
+            
+        }
+        
+        .mainImgFade {
+            width: 1980px;
+            height: 550px;
+            position: relative;
+            top: 0;
+            
+        }
+        
+        .mainImgFade ul {
+            width: 300%;
+            height: 900px;
+        }
+        
+        .mediaMainText{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        
+        .mediaMainText p{
+            font-size: 70px;
+            color: white;
+            font-family: 'SangSangRock';
+            text-align: center;
+        }
+        /*
+        .since{
+            width: 650px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100px;
+            padding-top: 25px;
+            border-radius: 5px;
+            position: relative;
+            bottom: -0px;
+            z-index: 5;
+            margin-top: 100px;
+        }*/
+        
+        
+        
+        /*section02*/
+        #fullpage .about{
+            width: 100%;
+            height: 900px;
+        }
+        
+        .aboutP_o{
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            color: #ccc;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            padding-top: 100px;
+        }
+        
+        .aboutP_a{
+            text-align: center;
+            font-size: 40px;
+            padding: 10px;
+            letter-spacing: 0.3em;
+            color: #777;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 900;
+        }
+        
+        .aboutLogo{
+            width: 30px;
+            margin: auto;
+            display: block;
+            transform: translateY(80px);
+        }
+        
+        .aboutCont{
+            width: 75%;
+            height: 60%;
+            margin: auto;
+            margin-top: 60px;
+        }
+        
+        .aboutCont>div{
+            width: 24%;
+            height: 400px;
+            float: left;
+            margin: 0px 0.5%;
+            animation: aboutContAniT 1.5s infinite;
+            animation-direction: alternate;
+            overflow: hidden;
+            box-shadow: 1px 1px 10px #333;
+        }
+        
+        .aboutCont>div:nth-of-type(1){
+            margin-left: 0px;
+        }
+        
+        .aboutCont>div:nth-of-type(4){
+            margin-right: 0px;
+        }
+        
+        .aboutCont>div:nth-of-type(even){
+            margin-top: 30px;
+            animation: aboutContAniB 1.5s infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes aboutContAniB{
+            0%{
+                transform: translateY(20px);
+            }
+            100%{
+                transform: translateY(-40px);
+            }
+        }
+        
+        @keyframes aboutContAniT{
+            0%{
+                transform: translateY(-20px);
+            }
+            100%{
+                transform: translateY(40px);
+            }
+        }
+        
+        .aboutContBox{
+            width: 90%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            opacity: 0;
+            transition: 0.5s;
+            
+        }
+        
+        .boxLogo{
+            width: 30%;
+            margin: auto;
+            display: block;
+            margin-top: 70px;
+        }
+        
+        .aboutCont>div:hover .aboutContBox{
+            opacity: 1;
+            transform: rotateY(360deg);
+        }
+        
+        .aboutCont>div:hover .aboutContBox>button{
+            transform: translateY(0px);
+        }
+        
+        .aboutContBox>button:hover{
+            background-color: #758247
+        }
+        
+        .aboutContBox p{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+        }
+        
+        .aboutContBox button{
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            bottom: 0;
+            color: white;
+            border: none;
+            font-size: 17px;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: translateY(100px);
+            transition: 1s;
+            cursor: pointer;
+        }
+        
+/*ㅡㅡㅡㅡㅡstoryㅡㅡㅡㅡㅡ*/
+        /*#fullpage .story{
+            width: 100%;
+        }
+        */
+        .storyP_o{
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            color: #ccc;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            margin-top: 60px;
+        }
+        
+        .storyP_a{
+            text-align: center;
+            font-size: 40px;
+            letter-spacing: 0.3em;
+            color: #777;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 900;
+        }
+        
+        .storyCont{
+            width: 75%;
+            margin: auto;
+            margin-top: 60px;
+        }
+        
+        .storyCont>input{
+            display: none;
+        }
+        
+        .label{
+            width: 100%;
+            height: 100px;
+            margin: auto;
+        }
+        
+        .label>label{
+            cursor: pointer;
+        }
+        
+        .storyCont>.label>label:first-of-type div{
+            margin-left: 0px;
+        }
+        
+        .tabActive{
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.01em;
+            color: #919191;
+            font-size: 25px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            width: 19.2%;
+            height: 100px;
+            background-color: #ccc;
+            float: left;
+            margin: 0px 0.44%;
+        }
+        
+        .storyCont>input:first-of-type:checked ~ .labelBox>.yearCont:first-of-type{
+            display: block;
+        }
+        
+        .storyCont>input:nth-of-type(2):checked ~ .labelBox>.yearCont:nth-of-type(2){
+            display: block;
+        }
+        
+        .storyCont>input:nth-of-type(3):checked ~ .labelBox>.yearCont:nth-of-type(3){
+            display: block;
+        }
+        
+        .storyCont>input:nth-of-type(4):checked ~ .labelBox>.yearCont:nth-of-type(4){
+            display: block;
+        }
+        
+        .storyCont>input:nth-of-type(5):checked ~ .labelBox>.yearCont:nth-of-type(5){
+            display: block;
+        }
+        
+        .storyCont>input:nth-of-type(1):checked ~ .label>label:nth-of-type(1) .tabActive{
+            color: white;
+            background-color: darkseagreen;
+        }
+        
+        .storyCont>input:nth-of-type(2):checked ~ .label>label:nth-of-type(2) .tabActive{
+            color: white;
+            background-color: darkseagreen;
+        }
+        
+        .storyCont>input:nth-of-type(3):checked ~ .label>label:nth-of-type(3) .tabActive{
+            color: white;
+            background-color: darkseagreen;
+        }
+        
+        .storyCont>input:nth-of-type(4):checked ~ .label>label:nth-of-type(4) .tabActive{
+            color: white;
+            background-color: darkseagreen;
+        }
+        
+        .storyCont>input:nth-of-type(5):checked ~ .label>label:nth-of-type(5) .tabActive{
+            color: white;
+            background-color: darkseagreen;
+        }
+        
+        .labelBox{
+            width: 100%;
+            height: 350px;
+            margin: auto;
+        }
+        
+        .labelBox .yearCont{
+            width: 99.5%;
+            height: 350px;
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .storyLine{
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: relative;
+            top: 100px;
+            z-index: 0;
+            margin: auto;
+        }
+        
+        
+        .YearBox{
+            width: 14.5%;
+            height: 180px;
+            float: left;
+            margin: 0px 6px;
+        }
+        
+        
+        .yearDot{
+            width: 20px;
+            height: 20px;
+            background-color: #758247;
+            border-radius: 100%;
+            margin-left: 45%;
+            margin-top: 90px;
+            float: left;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .YearCont{
+            height: 100%;
+            text-align: center;
+            padding-top: 110px;
+        }
+        
+        .YearCont b{
+            font-size: 30px;
+            position: relative;
+            top: 20px;
+        }
+        
+        .YearCont p{
+            padding-top: 30px;
+            letter-spacing: -0.1em;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+/*ㅡㅡㅡㅡㅡㅡbiㅡㅡㅡㅡㅡㅡ*/
+        .bi{
+            width: 75% !important;
+            height: 350px;
+            margin: auto;
+        }
+        .biCont{
+            width: 60%;
+            height: 350px;
+            float: right;
+        }
+        
+        .bi img{
+            width: 200px;
+            float: left;
+            margin-left: 10%;
+            margin-top: 4%;
+        }
+        
+        .bi p:first-of-type{
+            font-size: 30px;
+            font-family: 'JSArirangHON-Regular';
+            text-align: center;
+            padding-top: 20px;
+            float: right;
+            margin-right: 5%;
+            width: 90%;
+        }
+        
+        .bi p:nth-of-type(2){
+            font-size: 18px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            line-height: 150%;
+            float: right;
+            width: 90%;
+            margin-right: 5%;
+        }
+        
+/*ㅡㅡㅡㅡㅡㅡmeseumㅡㅡㅡㅡㅡㅡ*/
+        .meseumSlideImg{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .meseumSlideImg ul{
+            width: 500%;
+        }
+        
+        .meseumSlideImg ul li{
+            float: left;
+        }
+        
+        .meseumSlideImg ul li img{
+            margin-left: -50%;
+            transform: translateX(50%);
+        }
+        
+        .meseumSlideP{
+            width: 700px;
+            height: 350px;
+            margin: auto;
+            position: relative;
+            z-index: 10;
+            top: -350px;
+            overflow: hidden;
+        }
+        
+        .meseumSlideP ul{
+            width: 500%;
+        }
+        
+        .meseumSlideP li{
+            height: 350px;
+            width: 700px;
+            margin: auto;
+            float: left;
+            text-align: center;
+        }
+        
+        .meseumTitle{
+            font-size: 35px;
+            text-align: center;
+            color: white;
+            display: block;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            padding-top: 70px;
+        }
+        
+        .meseumP{
+            color: white;
+            margin: auto;
+            text-align: center;
+            letter-spacing: -0.05em;
+            line-height: 180%;
+            padding-top: 50px;
+        }
+        
+/*ㅡㅡㅡㅡㅡlabelStoryㅡㅡㅡㅡㅡ*/
+        
+        .storyMap{
+            width: 400px;
+            height: 350px;
+            position: absolute;background-image: url(img/map.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin-left: 2%;
+        }
+        
+        
+        .leftDot,.centerDot,.rightDot{
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: white;
+            display: block;
+            position: absolute;
+        }
+        
+        .leftDot{
+            top: 220px;
+            left: 50px;
+        }
+        
+        .centerDot{
+           top: 226px;
+           left: 122px;
+        }
+        
+        .rightDot{
+            top: 195px;
+            left: 240px;
+        }
+/*ㅡㅡㅡㅡㅡstoryInnerTabㅡㅡㅡㅡㅡ*/
+        .storyInnerTab{
+            width: 57.7%;
+            height: 350px;
+            float: right;
+        }
+    
+        .storyInnerTab>input{
+            display: none;
+        }
+        
+        .innerTabLabel{
+            width: 30%;
+            height: 350px;
+            background-color: whitesmoke;
+            float: left;
+            
+        }
+        
+        .innerTabCont{
+            width: 70%;
+            height: 350px;
+            float: left;
+        }
+        
+        .innerTabLabel>label{
+            width: 100%;
+            height: 33.33%;
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            font-size: 25px;
+            line-height: 450%;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.05em;
+        }
+        
+        .innerTabLabel>label div{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .innerTabCont>div{
+            width: 90%;
+            display: none;
+            text-align: center;
+            font-size: 20px;
+            line-height: 180%;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.1em;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            
+        }
+        
+        .storyInnerTab input:first-of-type:checked ~ .innerTabLabel>label:first-of-type div {
+            background-color: #758247;
+        }
+        
+        .storyInnerTab input:nth-of-type(2):checked ~ .innerTabLabel>label:nth-of-type(2) div {
+            background-color: #758247;
+        }
+        
+        .storyInnerTab input:nth-of-type(3):checked ~ .innerTabLabel>label:nth-of-type(3) div {
+            background-color: #758247;
+        }
+        
+        .storyInnerTab input:first-of-type:checked ~ .innerTabCont>div:first-of-type{
+            display: block;
+        }
+        
+        .storyInnerTab input:nth-of-type(2):checked ~ .innerTabCont>div:nth-of-type(2){
+            display: block;
+        }
+        
+        .storyInnerTab input:nth-of-type(3):checked ~ .innerTabCont>div:nth-of-type(3){
+            display: block;
+        }
+        
+        .dotHover{
+            animation: dotAni 1.5s infinite;
+            transition: 2s;
+        }
+        
+        @keyframes dotAni{
+            0%{
+                width: 15px;
+                height: 15px;
+                border: 4px solid gold;
+                margin-left: -5px;
+                margin-top: -5px;
+               
+            }
+            
+            50%{
+                width: 10px;
+                height: 10px;
+                border: 4px solid gold;
+                margin-left: -2px;
+                margin-top: -2px;
+                
+            }
+            
+            100%{
+                width: 15px;
+                height: 15px;
+                border: 4px solid gold;
+                margin-left: -5px;
+                margin-top: -5px;
+                
+            }
+            
+        }
+        
+        .labelClick{
+            animation: dotAni 1.5s infinite;
+            background-color: indianred;
+        }
+        
+/*findStore*/
+        .findStore{
+            width: 100%;
+            height: 350px;
+            background-image: url(img/accordion_06.jpg);
+        }
+        
+        .findStore p:first-of-type{
+            font-size: 25px;
+            font-family: 'JSArirangHON-Regular';
+            text-align: center;
+            letter-spacing: -0.05em;
+            color: white;
+            padding-top: 60px;
+        }
+        
+        .findStore p:nth-of-type(2){
+            font-size: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.05em;
+            padding-top: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .serchLine{
+            width: 70%;
+            height: 50px;
+            margin: auto;
+            transform: translateY(20px);
+            font-family: 'Noto Sans KR', sans-serif;
+            
+        }
+        
+        .serchLine>select{
+            width: 27%;
+            height: 50px;
+            background-color: whitesmoke;
+            text-align: center;
+            outline: none;
+            padding-left: 2%;
+        }
+        
+        
+        .serchLine>input{
+            width: 48%;
+            height: 46px;
+            margin-left: 4.5px;
+            border: none;
+            font-size: 15px;
+            padding-left: 2%;
+        }
+        
+        .serchLine>input:focus{
+            outline: none;
+        }
+        
+        
+        .serchLine>button{
+            width: 20%;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            background-color: #758247;
+            color: white;
+            margin-left: 4.5px;
+        }
+        
+        .findStore p:nth-of-type(3){
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.05em;
+            padding-top: 50px;
+            color: white;
+            text-align: center;
+        }
+        
+        .reservation span{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+ /*make*/       
+        .make{
+            width: 75%;
+            height: 500px;
+            margin: auto;
+            background-color: red;
+        }
+        
+        .made {
+            font-size: 20px;
+            color: #555;
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .osulloc {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 0.1em;
+            color: #333;
+        }
+
+        .accordion {
+            width: 80%;
+            height: 60%;
+            margin: auto;
+            margin-top: 60px;
+            overflow: hidden;
+        }
+
+        .accordion > div {
+            width: 10%;
+            height: 100%;
+            float: left;
+            transition: 0.5s ease-in-out;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .accordion > div:nth-child(1) {
+            background-image: url(./img/accordion_01.jpg);
+            width: 50%;
+        }
+
+        .accordion > div:nth-child(2) {
+            background-image: url(./img/accordion_03.jpg);
+        }
+
+        .accordion > div:nth-child(3) {
+            background-image: url(./img/accordion_05.jpg);
+        }
+
+        .accordion > div:nth-child(4) {
+            background-image: url(./img/accordion_04.jpg);
+        }
+
+        .accordion > div:nth-child(5) {
+            background-image: url(./img/accordion_02.jpg);
+        }
+
+        .accordion > div:nth-child(6) {
+            background-image: url(./img/accordion_06.jpg);
+        }
+
+        .icon {
+            width: 70%;
+            transition: 1s;
+            transform: translateY(143%) translateX(27px);
+        }
+
+        .accordion div p {
+            width: 500px;
+            color: whitesmoke;
+            font-size: 15px;
+            position: absolute;
+            left: 50%;
+            top: 53%;
+            transform: translateX(-50%);
+            line-height: 210%;
+            letter-spacing: -0.1em;
+            text-align: center;
+            display: none;
+        }
+
+        .accordionActive{
+            width: 20px;
+            background-color: green;
+            transform:  translateY(150px) translateX(22%);
+        }
+        
+        .footer{
+            width: 100%;
+            height: 250px;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #758247;
+        }
+        
+        .footerBox{
+            width: 80%;
+            height: 100%;
+            margin: auto;
+        }
+        
+        .leftFooter{
+            width: 15%;
+            height: 100%;
+            float: left;
+        }
+        
+        .leftFooter img{
+            margin: auto;
+            display: block;
+            margin-top: 25px;
+        }
+        
+        .leftFooter p{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 15px;
+            color: white;
+            letter-spacing: -0.05em;
+        }
+        
+        .centerFooter{
+            width: 65%;
+            height: 100%;
+            float: left;
+        }
+        
+        
+        .centerFooter ul{
+            width: 610px;
+            margin: auto;
+            margin-top: 50px;
+            
+        }
+        
+        .centerFooter ul li{
+            float: left;
+            margin: 0px 10px;
+                
+        }
+        
+        .centerFooter ul li a{
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            color: white;
+        }
+        
+        .centerFooter ul li a::after{
+            content: '|';
+            margin-left: 20px;
+                
+        }
+        
+        .centerFooter ul li:last-of-type a::after{
+            content: '';
+            margin-left: 0px;
+        }
+        
+        .centerFooter p{
+            clear: both;
+            width: 735px;
+            margin: auto;
+            padding-top: 40px;
+            letter-spacing: -0.07em;
+            line-height: 180%;
+            font-size: 17px;
+            color: white;
+            text-align: center;
+        }
+        
+        .rightFooter{
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+        
+        .rightFooter p:first-of-type{
+            color: white;
+            letter-spacing: -0.05em;
+            text-align: center;
+            margin-top: 40px;
+            line-height: 250%;
+            font-size: 20px;
+        }
+        
+        .rightFooter span{
+            font-size: 35px;
+        }
+        
+        .rightFooter p:nth-of-type(2){
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            margin-top: 3px;
+            letter-spacing: -0.05em;
+        }
+        
+        .MeCenterFooter{
+            display: none;
+        }
+        
+        @media all and (max-width: 1023px){
+        *{transition: 0.5s;}
+        
+           .aboutCont,.storyCont,.accordion{
+                width: 90%;
+           }
+            
+            .mainLogo{
+                width: 100px;
+                margin-left: 5%;
+                margin-top: 30px;
+            }
+            
+           nav{
+                width: 100%;
+                height: 100px;
+                margin: auto;
+                background-color: indianred;
+            }
+
+            
+            nav ul{
+                width: 550px;
+                height: 100px;
+                float: right;
+            }
+            
+            nav ul li{
+                padding-right: 25px;
+            }
+            
+            nav ul li a{
+                font-size: 17px;
+            }
+            
+            .mediaMainText{
+                padding: 0px 150px;
+            }
+            
+            .mediaMainText p{
+                font-size: 40px;
+                color: white;
+                font-family: 'SangSangRock';
+                text-align: center;
+                
+            }
+            
+            .since p{
+                position: relative;
+                bottom: 20px;
+            }
+/*story*/
+            .YearCont p{
+                font-size: 17px;
+            }
+            
+            .aboutContBox p{
+                font-size: 17px;
+                letter-spacing: -0.05em;
+            }
+            .bi{
+                width: 100% !important;
+            }
+            
+            .bi p:first-of-type{
+                font-size: 27px;
+            }
+            
+            .bi p:nth-of-type(2){
+                font-size: 16px;
+            }
+            
+            .storyMap{
+                width: 250px;
+            }
+            
+            
+            .Dot{
+                width: 10px;
+                height: 10px;
+            }
+            
+            .leftDot{
+                top: 200px;
+                left: 50px;
+            }
+            
+            .centerDot{
+                top: 206px;
+                left: 112px;
+            }
+            
+            .rightDot{
+                top: 180px;
+                left: 170px;
+            }
+            
+            .innerTabLabel>label div{
+                font-size: 18px;
+            }
+            
+            .innerTabCont>div{
+                font-size: 17px;
+            }
+            
+            .serchLine{
+                width: 80%;
+            }
+            
+            .accordion div p{
+                font-size: 17px;
+                width: 300px;
+                letter-spacing: -0.1em;
+                top: 50%;
+                line-height: 150%;
+            }
+/*footer*/
+            .leftFooter {
+                margin-left: 2%;
+            }
+            
+            .leftFooter img{
+                width: 100px;
+                margin-top: 50px;
+            }
+            
+            .leftFooter p{
+                display: none;
+            }
+            
+            .footerBox{
+                width: 90%;
+            }
+            
+            .centerFooter{
+                display: none;
+            }
+            
+            .MeCenterFooter{
+                width: 78%;
+                height: 100%;
+                float: left;
+                margin-left: 2%;
+                display: block;
+                margin-left: 2%;
+            }
+            
+            .MeCenterFooter ul li{
+                float: left;
+            }
+            
+            .MeCenterFooter ul {
+                display: none;
+                
+            }
+
+            .MeCenterFooter p{
+                clear: both;
+                text-align: center;
+                color: white;
+                font-size: 16px;
+                margin-top: 60px;
+                
+            }
+            
+            .rightFooter{
+                display: none;
+            }
+            
+            .rightFooter p:first-of-type{
+                font-size: 15px;
+                margin-top: 30px;
+            }
+            
+            
+        }
+        
+        
+        @media all and (max-width: 767px){
+            body{
+                display: none;
+            }
+        }
+        
+    </style>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script>
+        $(function(){
+            $('#fullpage').fullpage({
+		        //options here
+		        autoScrolling:true,
+		        scrollHorizontally: true,
+                anchors:['COZIT', 'YARN', 'SS', 'PRODUCTS', 'footer'],
+                afterLoad: function(origin){
+                    var loadedSection = this;
+                    if( loadedSection.index()>=1){
+                        $('header').addClass('active');
+                    }else{
+                        $('header').removeClass('active');
+                    }
+                }
+
+	        });
+            $('aside button').click(function(e){
+                e.preventDefault();
+                $('aside').toggleClass('active');
+            })
+        })/* 페이지 슬라이드 */
+        
+        $(function(){
+            setInterval(slide,3000);
+            
+            function slide(){
+                $('.mainImgFade>ul').stop().fadeOut(slideNext);
+            }
+            
+            function slideNext(){
+                $('.mainImgFade>ul>li').eq(0).appendTo('.mainImgFade>ul')
+                $('.mainImgFade>ul').stop().fadeIn();
+            }
+        })/*메인이미지 페이드 인아웃*/
+        
+        $(function(){
+            var timer = setInterval( substrFun, 250);
+            var n = 0;
+            function substrFun(){
+                var str = '차와 제주가 선사하는 삶의 아름다움'.substring(0,n++ );
+                console.log(str);
+                $('.mediaMainText>p').text(str);
+                }
+
+            var srt = $('.mediaMainText>p').text();
+                console.log( srt.toLowerCase().toUpperCase() );
+        });/*메인텍스트 추출*/
+        
+        $(function(){
+            $('#number').click(function(){
+                setInterval(slide,3000);
+            
+                function slide(){
+                    $('.meseumSlideImg>ul').stop().animate({marginLeft:-1200},2000,slideNext);
+                    $('.meseumSlideP>ul').stop().animate({marginLeft:-00},2000,slideNext);
+                }
+
+                function slideNext(){
+                    $('.meseumSlideImg>ul>li').eq(0).appendTo('.meseumSlideImg>ul')
+                    $('.meseumSlideImg>ul').stop().animate({marginLeft:0},0)
+                    $('.meseumSlideP>ul>li').eq(0).appendTo('.meseumSlideP>ul')
+                    $('.meseumSlideP>ul').stop().animate({marginLeft:0},0)
+                    
+                }
+            })
+        });/*museum 이미지 슬라이드*/
+        
+        $(function(){
+            $('.innerTabLabel label').mouseover(function(){
+            number = $(this).index();
+                
+            $('.storyMap').find('.Dot').eq(number).addClass('dotHover');
+            }).mouseout(function(){
+            $('.storyMap').find('.Dot').eq(number).removeClass('dotHover')
+            })
+        
+        });/*Osulloc Story hover*/
+        
+        /*
+        $(function(){
+            var label = $('.innerTabLabel label');
+            var stroyMap = $('.storyMap div');
+            var idx = 0;
+
+            label.mouseover(function(){
+
+            idx = label.index(this); // mouseover된 요소의 index값을 구하고 idx에 저장
+            stroyMap.eq(idx).addClass('hover') // stroyMap div 중 같은 index의 요소에 hover 클래스 추가
+
+            }).mouseout(function(){
+
+            stroyMap.eq(idx).removeClass('hover')
+
+            })
+        
+        })*/
+        
+        $(function(){
+            $('.storyMap .Dot').eq(0).addClass('labelClick');
+            $('.storyInnerTab label').click(function(){
+                DotNumber = $(this).index();
+                
+                $('.storyMap').find('.Dot').eq(DotNumber).addClass('labelClick');
+                // DotNumber.not($(this)).removeClass('labelClick');
+                $('.storyMap').find('.Dot').eq(DotNumber).siblings().removeClass('labelClick');
+                
+            })
+        })/*지도 위치 표시*/
+        
+        $(function(){
+             $('.accordion>div:nth-child(1) img').css({'transform':'translateY(150px) translateX(200px)'});
+
+             $('.accordion div').click(function(){
+                 $('.accordion>div').css({'width':'10%'});
+                 $('.accordion>div img').css({'transform':'translateY(150px) translateX(25%)','width':'70%'});//접힌 아코디언 안의 아이콘 위치 이동
+                 $(this).css({'width':'50%'});//해당된 div의 가로값이 50%로 변하고
+                 // $(this).find('img').css({'transform':'translateY(50px) translateX(50%)'});//그 안의 이미지의 위치가 변한다
+             })
+        });/*전체 아코디언 조절*/
+        
+        
+        $(function(){
+            $('.accordion>div:nth-child(1) img').css({'width':'23%','transform':'translateY(50%) translateX(-50%)','margin-left':'50%'});
+            
+            $('.accordion div').click(function(){
+                
+                accoNum = $(this).index();
+                $('.accordion img').eq(accoNum).css({'width':'23%','transform':'translateY(50%) translateX(160%)'})
+                $('.accordion>div p').eq(accoNum).css({'display':'block'});//내용이 보여진다
+                $('.accordion>div:nth-child(1) img').css({'transform':'translateY(150px) translateX(-50%)','margin-left':'50%'})
+                   
+            })
+        })/*아코디언 이미지 조절*/
+        
+        
+        $(function(){
+            $('.accordion div:nth-child(1) p').css({'display':'block'})
+        })
+        
+        $(function(){
+            
+            var mql = window.matchMedia("screen and (max-width: 1200px)");
+            
+            if (mql .matches) {
+                $('.accordion div:nth-child(1) .icon').css({'transform':'translateY(150%) translateX(-40%)'});
+                $('icon').css({'transform':'translateY(150%) translateX(-20%)','background-color':'red'})
+                
+            } else {
+            
+            }
+        })
+        
+
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="ex01.html"><img src="./img/logo_white.png" alt="오설록CI" width="140" class="mainLogo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">OSULLOC</a></li>
+                    <li><a href="#">OSULLOC BI</a></li>
+                    <li><a href="#">MAKE OSULLOC</a></li>
+                    <li><a href="#">OSULLOC MARK</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="fullpage">
+        <section class="section main" data-anchor="COZIT">
+            <div class="mainImgFade">
+                <ul>
+                    <li><img src="./img/mImg_04.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/mImg_05.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/mImg_01.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/mImg_02.jpg" alt="메인이미지"></li>
+                </ul>
+            </div>
+            <div class="mediaMainText">
+                <p>차와 제주가 선사하는 <br> 삶의 아름다움</p>
+            </div>
+            <div class="since">
+                
+            </div>
+        </section>
+        <section class="section about" data-anchor="YARN">
+            <p class="aboutP_o">OSULLOC</p>
+            <p class="aboutP_a">ABOUT</p>
+            <div class="aboutCont">
+                <div>
+                    <img src="./img/about_06.jpg" alt="ABOUT 오설록 이미지">
+                    <div class="aboutContBox">
+                        <img src="./img/logoBi_green.png" alt="오설록 로고" class="boxLogo">
+                        <p>한국을 대표하는 <br> 프리미엄 차 브랜드</p>
+                        <button type="button">+ 자세히보기</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/about_05.jpg" alt="ABOUT 오설록 이미지">
+                    <div class="aboutContBox">
+                        <img src="./img/logoBi_green.png" alt="오설록 로고" class="boxLogo">
+                        <p>차와 제주가 선사하는<br> 삶의 아름다움 </p>
+                        <button type="button">+ 자세히보기</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/about_02.jpg" alt="ABOUT 오설록 이미지">
+                    <div class="aboutContBox">
+                        <img src="./img/logoBi_green.png" alt="오설록 로고" class="boxLogo">
+                        <p>유기농 인증을 획득한<br>믿을 수 있는 명차</p>
+                        <button type="button">+ 자세히보기</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/about_01.jpg" alt="ABOUT 오설록 이미지">
+                    <div class="aboutContBox">
+                        <img src="./img/logoBi_green.png" alt="오설록 로고" class="boxLogo">
+                        <p>오설록만의 건강한<br>시그니처 발효법 </p>
+                        <button type="button">+ 자세히보기</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="section story" data-anchor="SS">
+            <p class="storyP_o">OSULLOC</p>
+            <p class="storyP_a">STORY</p>
+            <div class="storyCont">
+                <input type="radio" name="storyTab" id="since" checked>
+                <input type="radio" name="storyTab" id="bi">
+                <input type="radio" name="storyTab" id="number">
+                <input type="radio" name="storyTab" id="map">
+                <input type="radio" name="storyTab" id="housemenu">
+                <div class="label">
+                    <label for="since">
+                        <div class="tabActive">
+                            Since 1979
+                        </div>
+                    </label>
+                    <label for="bi">
+                        <div class="tabActive"> 
+                            Bi Story
+                        </div>
+                    </label>
+                    <label for="number">
+                        <div class="tabActive">
+                            JeJu Tea Museum
+                        </div>
+                    </label>
+                    <label for="map">
+                        <div class="tabActive">
+                            Osulloc Story
+                        </div>
+                    </label>
+                    <label for="housemenu">
+                        <div class="tabActive">
+                            Tea House Menu
+                        </div>
+                    </label>
+                </div>
+                <div class="labelBox">
+                    <div class="yearCont">
+                        <div class="storyLine"></div>
+                        <div class="YearBox" style="margin-left: 2.5%">
+                           <div class="yearDot"></div>
+                            <div class="YearCont">
+                                <b>1979</b>
+                                <p>제주 돌송이차밭 <br> 부지 돌밭 개간 착공</p>
+                            </div>
+                        </div>
+                        <div class="YearBox">
+                            <div class="yearDot"></div>
+                            <div class="YearCont">
+                                <b>1980</b>
+                                <p>설록차 브랜드 발매 <br>만수, 천수, 백수 출시</p>
+                            </div>
+                        </div>
+                        <div class="YearBox">
+                            <div class="yearDot"></div>
+                            <div class="YearCont">
+                                <b>1983</b>
+                                <p>국내 최초 차 전문 매거진 <br>태평양 '설록차' 창간</p>
+                            </div>
+                        </div>
+                        <div class="YearBox">
+                            <div class="yearDot"></div>
+                            <div class="YearCont">
+                                <b>2005</b>
+                                <p>제추 차밭과 인접한 곳에 <br>설록차 연구소 설립</p>
+                            </div>
+                        </div>
+                        <div class="YearBox">
+                            <div class="yearDot"></div>
+                            <div class="YearCont">
+                                <b>2016</b>
+                                <p>업계 최초 차&#40;茶&#41;에 <br>콜드브루 방식 적용</p>
+                            </div>
+                        </div>
+                        <div class="YearBox">
+                            <div class="yearDot"></div>
+                            <div class="YearCont">
+                                <b>2020</b>
+                                <p>독일 IF 디자인어워드 <br>패키지 디자인 부문 수상</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yearCont bi">
+                        <img src="./img/logo_03.png" alt="">
+                        <div class="biCont">
+                            <p>'눈 속에서도 피어나는 <br> 녹차의 생명력에 대한 감탄의 표현'</p>
+                            <p>
+                               오설록은 주식회사 오설록의 차 브랜드로 당시 태평양화학 창업주 <br>
+                                고 서성환 회장의 지시로 황무지에 녹차밭 가꾸기 사업을 시작해,<br>
+                                1983년 3월 황무지 49만 5000m(약 15만 평)을 <br>
+                                개간하여 다원과 녹차 공장을 만들었습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="yearCont meseum">
+                        <div class="meseumSlideImg">
+                            <ul>
+                                <li><img src="./img/museumImg_01.jpg" alt=""></li>
+                                <li><img src="./img/museumImg_02.jpg" alt=""></li>
+                                <li><img src="./img/museumImg_03.jpg" alt=""></li>
+                                <li><img src="./img/museumImg_04.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="meseumSlideP">
+                            <ul>
+                                <li>
+                                    <p class="meseumTitle">티스톤</p>
+                                    <p class="meseumP">오설록 티스톤은 2013년 3월 제주 티뮤지엄 옆에 개관한 복합 차 문화 체험공간입니다. <br> 
+                                    예로부터 우리 선조들이 먹과 벼루(Ink-Stone)를 이용해 글과 그림으로 정신적 문화유산을 이루었듯,<br> 
+                                    티스톤은 한국 차 문화 부흥의 근간이 되겠다는 오설록의 아름다운 집념을 담았습니다.<br> 
+                                    제주의 곶자왈 풍경을 바라보며 즐기는 티클래스는 품격 있는 쉼을 선사합니다.</p>
+                                </li>
+                                <li>
+                                    <p class="meseumTitle">차문화실</p>
+                                    <p class="meseumP">차의 역사와 우리나라의 삼국시대에서 조선시대에 이르는 <br>
+                                    우리의 소중한 정신 문화를 보여주는 귀한 다구들이 전시되어 있습니다.</p>
+                                </li>
+                                <li>
+                                    <p class="meseumTitle">세계의 찻잔</p>
+                                    <p class="meseumP">아시아와 유럽 각지에서 차와 함께 발전해오고,  <br>
+                                    차의 역사와 다양한 가치를 담고 있는 아름다운 찻잔들이 전시되어 있습니다.</p>
+                                </li>
+                                <li>
+                                    <p class="meseumTitle">티 로스터리</p>
+                                    <p class="meseumP">제주 유기농 차밭에서 채엽한 찻잎의 로스팅부터 패키징까지, <br>
+                                    모든 과정을 한눈에 볼 수 있는 공간입니다.<br> 
+                                    갓 로스팅 하여 보다 신선하고 구수한 차의 향기를 경험해보세요.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="yearCont labelStory">
+                       <div class="storyMap">
+                            <div class="Dot leftDot"></div>
+                            <div class="Dot centerDot"></div>
+                            <div class="Dot rightDot"></div>
+                        </div>
+                        <div class="storyInnerTab">
+                            <input type="radio" name="innertab" id="storyColor" checked>
+                            <input type="radio" name="innertab" id="storyIncense">
+                            <input type="radio" name="innertab" id="storyFlavor">
+                            <div class="innerTabLabel">
+                                <label for="storyColor"><div class="innerLabel">서광 차밭</div></label>
+                                <label for="storyIncense"><div class="innerLabel">돌송이 차밭</div></label>
+                                <label for="storyFlavor"><div class="innerLabel">한남 차밭</div></label>
+                            </div>
+                            <div class="innerTabCont">
+                                <div>
+                                    산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한 기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육 조건이 됩니다. 서광리는 전체가 돌밭이라고 해도 될 만큼 작물 재배가 어려운 곳이었지만, 1983년 개간을 시작해 척박한 땅에 새생명을 불어넣어 우리나라에서 가장 광대한 차밭을 조성하였습니다.
+                                </div>
+                                <div>
+                                    돌송이 차밭 지역은 예로부터 ‘화산재가 굳어서 돌멩이같이 잘게 부서진 돌덩이’가 많아 ‘돌송이’라고 불리어 왔습니다. 돌이 전부였던 황무지를 맨손으로 일궈낸 곳이라 오설록의 아름다운 집념이 가장 상징적으로 드러난 차밭입니다. 이곳은 산과 바다를 동시에 접하고 있어 매년 4월 한라산의 잔설을 품은 산바람과 바다의 수분을 머금은 바닷바람이 밤낮으로 불어와 돌송이 차밭에서 채엽한 녹차는 향이 매우 좋습니다.
+                                </div>
+                                <div>
+                                    과거 ‘해들이밭’이라 하여 마을에서 가장 먼저 해가 드는 곳이라 불렸던 한남 차밭은 아침부터 불어오는 따뜻한 바람 덕분에 사람과 자연이 모두 온화하게 성장할 수 있는 곳입니다. 한남 차밭은 유기농 재배와 효율적인 경작을 위해 많은 노력과 투자를 하여 질이 좋은 고품질의 녹차를 생산하고 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yearCont findStore">
+                        <p>도심 속 작은 제주를 만나다</p>
+                        <p>오설록 티스토어</p>
+                        <div class="findBox">
+                            <div class="serchLine">
+                                <select name="" id="">
+                                    <option value="" class="re">매장유형</option>
+                                    <option value="">전체</option>
+                                    <option value="">티뮤지엄</option>
+                                    <option value="">티하우스</option>
+                                    <option value="">백화점</option>
+                                    <option value="">면세점</option>
+                                </select>
+                                <input type="text" placeholder="매장명을 입력하세요">
+                                <button>검색</button>
+                            </div>
+                        </div>
+                        <p class="reservation">예약내역은 마이페이지에서 확인하실 수 있습니다. &nbsp; <span>예약내역 확인하기</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section make" data-anchor="PRODUCTS">
+            <p class="storyP_o">Make</p>
+            <p class="storyP_a">OSULLOC</p>
+            <div class="accordion">
+                <div>
+                    <img src="./img/accordionIcon_01.png" alt="화산회토 픽토그램" class="icon">
+                    <p>제주의 흙은 전 세계적으로 손꼽히는 공극률로 물과 공기의 흐름을 원활하게 하고 <br>
+                        일반 토양보다 10배나 높은 유기물을 함유하고 있습니다. 제주에만 존재하는 다공성 <br>
+                        현무암 자갈돌이 토양의 물리적 특성을 개선하여 보다 좋은 찻잎을 자라나게 합니다.</p>
+                </div>
+                <div>
+                    <img src="./img/accordionIcon_02.png" alt="강수량 픽토그량" class="icon">
+                    <p>제주는 연평군 강수량 1,800mm로, 깨끗한 대기와 화산회토가 <br>
+                        걸러낸 천연 청정수를 머금어 차나무가 사계설 내내 건강하게 자랍니다.</p>
+                </div>
+                <div>
+                    <img src="./img/accordionIcon_03.png" alt="새싹 픽토그램" class="icon">
+                    <p>한라산의 잔설을 품은 산바람과 제주바다의 수분을 머금은 바닷바람이 <br>
+                        밤낮으로 불어오는 제주 차밭에서는 향이 좋은 녹차가 자랍니다.</p>
+                </div>
+                <div>
+                    <img src="./img/accordionIcon_04.png" alt="해무 픽토그램" class="icon">
+                    <p>바다로 둘러싸인 제주는 연간 안개 발생일수가 25일로 <br>
+                        녹차나무에 자연 차광 효과를 주어 여린 잎 본연의 맛과 색을 살려서<br>
+                        최고 품질의 녹차를 탄생시킵니다.</p>
+                </div>
+                <div>
+                    <img src="./img/accordionIcon_06.png" alt="해 픽토그램" class="icon">
+                    <p>연평균 16ºC 인 제주에서 오설록의 녹차는 사계절 내내 <br>
+                        따뜻한 빛을 품고 자라 최고의 명품녹차로 자라게 됩니다.</p>
+                </div>
+                <div>
+                    <img src="./img/accordionIcon_05.png" alt="녹차 픽토그램" class="icon">
+                    <p>차를 재배하는 데에도 시간과 정성이 필요하지만 <br>
+                        차를 우려내는 시간과 정성에 따라서도 차의 맛과 향은 달라집니다. <br>
+                        시간과 정성이 만들어내는 차 한 잔의 여유를 느껴보세요.</p>
+                </div>
+            </div>
+        </section>
+        <footer class="section fp-auto-height" data-anchor="footer">
+            <div class="footer">
+                <div class="footerBox">
+                    <div class="leftFooter">
+                        <img src="./img/footerLogo.png" alt="오설록 로고" width="100px">
+                        <p>&#40;주&#41; 오설록</p>
+                    </div>
+                    <div class="centerFooter">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">서비스 이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">임직원할인</a></li>
+                            <li><a href="#">뷰티포인트</a></li>
+                        </ul>
+                        <p>
+                            대표이사:서혁제 &nbsp; &nbsp;주소:서울특별시 용산구 한강대로 100, 14층(한강로2가) &nbsp; &nbsp;사업자등록번호: 390-87-01499 <br>
+                            (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자 이며 통신판매의 당사자가 아닙니다.<br>
+                            따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다. 
+                        </p>
+                    </div>
+                    <div class="MeCenterFooter">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">서비스 이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">임직원할인</a></li>
+                            <li><a href="#">뷰티포인트</a></li>
+                        </ul>
+                        <p>
+                            대표이사:서혁제 &nbsp; &nbsp;주소:서울특별시 용산구 한강대로 100, 14층(한강로2가) <br> 사업자등록번호: 390-87-01499 <br>
+                            (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 <br> 통신판매중개자 이며 통신판매의 당사자가 아닙니다.<br>
+                            따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다. 
+                        </p>
+                    </div>
+                    <div class="rightFooter">
+                        <p>
+                            고객상담센터·주문/배송문의<br>
+                            <span>080-805-5555</span>
+                        </p>
+                         <p>
+                            평일 09:30 ~ 17:00 <br>
+                            점심 11:00 ~  12:00 
+                         </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
